@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>1001 OPTOFFICE Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="login-container">
+      <h1>1001 OPTOFFICE</h1>
+      {% if error %}
+        <div class="error-msg">{{ error }}</div>
+      {% endif %}
+      <form method="post" action="{{ url_for('main.login') }}">
+        <input type="text" name="username" placeholder="Username" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+
