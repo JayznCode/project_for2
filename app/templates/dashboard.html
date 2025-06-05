@@ -5,6 +5,7 @@
     <title>1001 OPTOFFICE Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}" />
     <script src="{{ url_for('static', filename='js/dashboard.js') }}" defer></script>
+
     <style>
         /* 기존 dashboard.css에 추가할 CSS */
         .cards {
@@ -133,8 +134,8 @@
                 <p>2 urgent</p>
             </div>
             <div class="card">
-                <h3>Sample 1</h3>
-                <p>Content 1</p>
+                <h3>달력</h3>
+		<p id="calendar">1</p>
             </div>
             <div class="card">
                 <h3>Sample 2</h3>
