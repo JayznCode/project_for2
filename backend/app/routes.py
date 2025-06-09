@@ -1,5 +1,4 @@
-# app/routes.py
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, redirect, url_for, jsonify
 
 main = Blueprint('main', __name__)
 
@@ -17,4 +16,13 @@ def login():
 @main.route('/dashboard')
 def dashboard():
     return render_template('dashboard.html')
+
+# 여기에 새로운 API 엔드포인트 추가
+@main.route('/api/data')
+def get_data():
+    data = {
+        "message": "Hello from Flask API!",
+        "status": "success"
+    }
+    return jsonify(data)
 
